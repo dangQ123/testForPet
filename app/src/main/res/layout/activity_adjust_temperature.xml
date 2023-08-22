@@ -31,6 +31,45 @@
 
         </ImageView>
 
+        <TextView
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="52dp"
+            android:textColor="#ff3D3D3D"
+            android:textSize="50sp"
+            android:lineSpacingExtra="-16sp"
+            android:textFontWeight="500"
+            android:fontFamily="@font/notosanssc_black"
+            android:text="温度"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+        <TextView
+            android:id="@+id/tempratureNum"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="187dp"
+            android:textColor="#ffFF9900"
+            android:textSize="50sp"
+            android:lineSpacingExtra="119sp"
+            android:textFontWeight="700"
+
+            android:text="27 ℃"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"></TextView>
+
+        <TextView
+            android:text="摄氏度"
+            android:layout_marginLeft="29dp"
+            android:layout_marginTop="237dp"
+            android:textColor="#ff3D3D3D"
+            android:textSize="20sp"
+            android:lineSpacingExtra="-12sp"
+            android:textFontWeight="500"
+            android:fontFamily="@font/notosanssc_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+
+
     </FrameLayout>
 
 </LinearLayout>

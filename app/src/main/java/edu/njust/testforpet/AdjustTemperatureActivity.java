@@ -20,7 +20,7 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
     private ImageView adjustImageView ;
     private ImageView adjustSmallButton ;
     private Handler handler;
-    private FrameLayout frameLayout;
+    private TextView temperatureNum;
     public static float parent_x_px, parent_y_px;
     private float offsetX, offsetY;
     private float circle_x_px, circle_y_px;
@@ -33,8 +33,9 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
             public void run() {
                 smallButton_x_px = adjustSmallButton.getX()+34.5f/2*density;
                 smallButton_y_px = adjustSmallButton.getY()+34.5f/2*density;
-                Vector2D res = putInCircle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px,220*density);
-                double dis = getDistanceToCirclePointWithDP(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px);
+                int temp = (int) (getAngle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px)/9+20);
+                temperatureNum.setText(""+temp
+                +"℃");
 
                 // 继续定时任务
                 startUpdatingText();
@@ -48,7 +49,7 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         density = getResources().getDisplayMetrics().density;
         adjustSmallButton = findViewById(R.id.adjustSmallButton);
         adjustImageView = findViewById(R.id.adjustImageView);
-
+        temperatureNum = findViewById(R.id.tempratureNum);
         handler = new Handler(Looper.getMainLooper());
 
         // 开始定时任务，每隔一段时间更新一次 TextView
@@ -124,9 +125,6 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         return Vector2D.radian2Angle(rad);
     }
 
-    public double getAngleToCircle(float circle_x , float circle_y , float x, float y){
-        return getAngle(circle_x,circle_y,x,y);
-    }
 
 
     @Override
