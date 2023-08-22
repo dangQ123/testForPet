@@ -11,7 +11,16 @@
         android:id="@+id/framelayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <Button
+            android:id="@+id/backicon"
+            android:background="@drawable/backicon"
+            android:layout_width="11.98dp"
+            android:layout_height="20.79dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="10dp"
+            >
 
+        </Button>
         <ImageView
             android:id="@+id/adjustImageView"
             android:layout_gravity="right|top"
@@ -68,6 +77,60 @@
             android:fontFamily="@font/notosanssc_black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"></TextView>
+
+        <LinearLayout
+            android:layout_marginLeft="38.67dp"
+            android:layout_marginBottom="91dp"
+            android:layout_gravity="bottom|left"
+            android:layout_width="150dp"
+            android:layout_height="80dp">
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/cold_notpress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <TextView
+                    android:textColor="#ff3D3D3D"
+                    android:text="制热"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:src="@drawable/cold_notpress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </ImageView>
+                <TextView
+                    android:textColor="#ff3D3D3D"
+                    android:text="制冷"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
 
 
     </FrameLayout>
