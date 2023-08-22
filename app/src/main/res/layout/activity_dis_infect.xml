@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DisInfectActivity">
+
+    <Button
+        android:layout_gravity="left"
+        android:id="@+id/backicon"
+        android:background="@drawable/backicon"
+        android:layout_width="11.98dp"
+        android:layout_height="20.79dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        >
+
+    </Button>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:src="@drawable/infectbigbutton1">
+
+    </ImageView>
+
+        <Button
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:id="@+id/operateDisinfectButton"
+            android:layout_width="259dp"
+            android:layout_height="51dp"
+            android:background="@drawable/disinfectbuttonretangle"
+            android:text="开始消毒"
+
+            android:textColor="#ff3D3D3D"
+            android:textSize="20sp">
+
+
+        </Button>
+</LinearLayout>

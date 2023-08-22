@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".LoginMainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="191dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="118dp"
+        android:layout_marginBottom="53dp"
+        android:src="@drawable/cat_head"
+
+        ></ImageView>
+
+    <Button
+        android:id="@+id/phonelogin"
+        android:text="@string/loginByPhone"
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center"
+        android:textColor="#ffFFFFFF"
+        android:fontFamily="@font/notosanssc_black"
+        android:textSize="18sp"
+        android:lineSpacingExtra="2.4sp"
+        android:textFontWeight="700"
+        android:background="@drawable/phoneloginretangle"
+        android:alpha="1">
+    </Button>
+
+    <Button
+        android:layout_width="343dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="23dp"
+        android:layout_gravity="center"
+        android:text="@string/loginByAccount"
+        android:textColor="#ffED9076"
+        android:textSize="18sp"
+        android:lineSpacingExtra="2.4sp"
+        android:textFontWeight="700"
+        android:fontFamily="@font/notosanssc_black"
+        android:background="@drawable/loginbyaccount"
+        android:alpha="1">
+    </Button>
+
+    <!-- 容器 7 -->
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/wechatloginicon"
+        android:layout_marginTop="118dp"
+        android:alpha="1">
+    </Button>
+
+    <LinearLayout
+
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center">
+
+        <CheckBox
+            android:id="@+id/radioButtonAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#3E85FF"
+            android:fontFamily="@font/notosanssc_black"
+            android:paddingLeft="5dp"
+            android:text="@string/arragementacc"
+            android:textColor="#A8A8A8"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/arrangementcontent"
+            android:fontFamily="@font/notosanssc_black"
+            android:textColorLink="#3E85FF">
+
+        </TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginPhoneActivity">
+
+    <Button
+        android:id="@+id/backicon"
+        android:background="@drawable/backicon"
+        android:layout_width="11.98dp"
+        android:layout_height="20.79dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="10dp"
+        >
+
+    </Button>
+    <LinearLayout
+        android:layout_marginTop="98.21dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:text="输入验证码"
+                android:textColor="#ffE22727"
+                android:textSize="34sp"
+                android:lineSpacingExtra="7.2sp"
+                android:textFontWeight="700"
+                android:fontFamily="@font/notosanssc_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <TextView
+                android:layout_marginLeft="30dp"
+
+                android:textColor="#ff000000"
+                android:textSize="14sp"
+                android:lineSpacingExtra="8.2sp"
+                android:textFontWeight="400"
+                android:text="已发送至"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <EditText
+        android:layout_marginTop="53dp"
+        android:maxLength="6"
+        android:id="@+id/verify_code"
+        android:textColorHint="#D8D8D8"
+        android:textSize="14sp"
+        android:lineSpacingExtra="8.2sp"
+        android:textFontWeight="400"
+        android:fontFamily="@font/notosanssc_black"
+        android:layout_gravity="center"
+        android:paddingLeft="14dp"
+        android:hint="输入验证码"
+        android:background="@drawable/phoneinputtangle"
+        android:layout_width="343dp"
+        android:layout_height="44dp">
+
+    </EditText>
+
+    <Button
+        android:enabled="false"
+        android:id="@+id/verify_button"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/accountloginretangle"
+        android:fontFamily="@font/notosanssc_black"
+        android:lineSpacingExtra="2.4sp"
+        android:text="登录"
+        android:textColor="#ffA8A8A8"
+        android:textFontWeight="700"
+        android:textSize="18sp">
+
+    </Button>
+
+    <TextView
+        android:layout_gravity="center"
+        android:textColor="#ff8F8F8F"
+        android:textSize="10sp"
+        android:lineSpacingExtra="12sp"
+        android:textFontWeight="400"
+        android:fontFamily="@font/notosanssc_black"
+        android:text="新用户登录后自动创建账号"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+</LinearLayout>

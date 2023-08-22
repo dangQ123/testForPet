@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">testForPet</string>
+    <string name="loginByPhone">手机验证码登录</string>
+    <string name="loginByAccount">账号登录</string>
+    <string name="arragementacc">我已阅读并同意</string>
+    <string name="arrangementcontent"><a href='#'>《隐私政策》、</a><a href='#'>《用户协议》</a></string>
+</resources>

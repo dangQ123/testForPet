@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginPhoneActivity">
+
+    <Button
+        android:id="@+id/backicon"
+        android:background="@drawable/backicon"
+        android:layout_width="11.98dp"
+        android:layout_height="20.79dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="10dp"
+        >
+
+    </Button>
+    <LinearLayout
+        android:layout_marginTop="98.21dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginLeft="30dp"
+                android:text="手机验证码登录"
+                android:textColor="#ffE22727"
+                android:textSize="34sp"
+                android:lineSpacingExtra="7.2sp"
+                android:textFontWeight="700"
+                android:fontFamily="@font/notosanssc_black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+            <Button
+                android:textColor="#ff000000"
+                android:textSize="14sp"
+                android:lineSpacingExtra="8.2sp"
+                android:textFontWeight="400"
+                android:fontFamily="@font/notosanssc_black"
+                android:layout_marginLeft="29dp"
+                android:background="@android:color/transparent"
+                android:text="使用密码登录  >"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <edu.njust.testforpet.customview.PhoneInputView
+        android:layout_marginTop="36dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </edu.njust.testforpet.customview.PhoneInputView>
+
+
+    <Button
+        android:enabled="false"
+        android:id="@+id/accountbutton"
+        android:layout_width="343dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/accountloginretangle"
+        android:fontFamily="@font/notosanssc_black"
+        android:lineSpacingExtra="2.4sp"
+        android:text="获取验证码"
+        android:textColor="#ffA8A8A8"
+        android:textFontWeight="700"
+        android:textSize="18sp">
+
+    </Button>
+
+    <TextView
+        android:layout_gravity="center"
+        android:textColor="#ff8F8F8F"
+        android:textSize="10sp"
+        android:lineSpacingExtra="12sp"
+        android:textFontWeight="400"
+        android:fontFamily="@font/notosanssc_black"
+        android:text="新用户登录后自动创建账号"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </TextView>
+
+    <Button
+        android:layout_gravity="center"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="@drawable/wechatloginicon"
+        android:layout_marginTop="130dp"
+        android:alpha="1">
+    </Button>
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/radioButtonAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#3E85FF"
+            android:fontFamily="@font/notosanssc_black"
+            android:paddingLeft="5dp"
+            android:text="@string/arragementacc"
+            android:textColor="#A8A8A8"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/notosanssc_black"
+            android:text="@string/arrangementcontent"
+            android:textColorLink="#3E85FF">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

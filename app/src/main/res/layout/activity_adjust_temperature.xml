@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".AdjustTemperatureActivity">
+
+    <FrameLayout
+        android:id="@+id/framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/adjustImageView"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="97dp"
+            android:layout_marginRight="-261dp"
+            android:src="@drawable/adjusthot"
+            android:layout_width="523dp"
+            android:layout_height="532dp">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/adjustSmallButton"
+            android:src="@drawable/adjustsmallbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </FrameLayout>
+
+</LinearLayout>
