@@ -3,13 +3,13 @@ package edu.njust.testforpet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,7 +17,7 @@ import edu.njust.testforpet.util.Vector2D;
 
 public class AdjustTemperatureActivity extends AppCompatActivity {
 
-    private ImageView adjustImageView ;
+    private ImageView adjustImageView , hotbutton,coldbutton;
     private ImageView adjustSmallButton ;
     private Handler handler;
     private TextView temperatureNum;
@@ -25,22 +25,37 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
     private float offsetX, offsetY;
     private float circle_x_px, circle_y_px;
     private float smallButton_x_px, smallButton_y_px;
+
+    private int status = STATUS_HOT;
+    public static final int STATUS_HOT = 0,STATUS_COLD = 1;
+
     float density ;
     private int count = 0;
+
+    public int getNowTemp(float circle_x_px, float circle_y_px,float smallButton_x_px,float smallButton_y_px , int status){
+        if (status==STATUS_HOT){
+            return (int) (getAngle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px)/9+20);
+        }else if (status==STATUS_COLD){
+            return (int) (getAngle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px)/9+10);
+        }else
+            return -1;
+    }
+
     private void startUpdatingText() {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 smallButton_x_px = adjustSmallButton.getX()+34.5f/2*density;
                 smallButton_y_px = adjustSmallButton.getY()+34.5f/2*density;
-                int temp = (int) (getAngle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px)/9+20);
+//                int temp = (int) (getAngle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px)/9+20);
+                int temp = getNowTemp(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px,status);
                 temperatureNum.setText(""+temp
                 +"℃");
 
                 // 继续定时任务
                 startUpdatingText();
             }
-        }, 1); // 每隔 秒更新一次
+        }, 500); // 每隔 秒更新一次
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +63,29 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adjust_temperature);
         density = getResources().getDisplayMetrics().density;
         adjustSmallButton = findViewById(R.id.adjustSmallButton);
+
+        hotbutton = findViewById(R.id.hotbutton);
+        coldbutton = findViewById(R.id.coldbutton);
+        hotbutton.setOnClickListener(view -> {
+            status = STATUS_HOT;
+            adjustSmallButton.setImageResource(R.drawable.adjustsmallbutton_hot);
+            adjustImageView.setImageResource(R.drawable.adjusthot);
+            temperatureNum.setTextColor(Color.parseColor("#FF9900"));
+        });
+        coldbutton.setOnClickListener(view -> {
+            status = STATUS_COLD;
+            adjustSmallButton.setImageResource(R.drawable.adjustsmallbutton_cold);
+            adjustImageView.setImageResource(R.drawable.adjustcold);
+            temperatureNum.setTextColor(Color.parseColor("#365EFF"));
+        });
+
+
         adjustImageView = findViewById(R.id.adjustImageView);
         temperatureNum = findViewById(R.id.tempratureNum);
         handler = new Handler(Looper.getMainLooper());
 
         // 开始定时任务，每隔一段时间更新一次 TextView
         startUpdatingText();
-
         adjustSmallButton.setOnTouchListener(new View.OnTouchListener() {
             @SuppressLint("ClickableViewAccessibility")
             @Override
@@ -117,23 +148,18 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         Vector2D vector2D = new Vector2D(x - circle_x, y- circle_y);
         return vector2D.getLength()/density;
     }
-
     public double getAngle(float circle_x , float circle_y , float x, float y){
         Vector2D down = new Vector2D(0,1);
         Vector2D toCircle = new Vector2D(x-circle_x , y-circle_y);
         double rad = Vector2D.radianBetween(down,toCircle);
         return Vector2D.radian2Angle(rad);
     }
-
-
-
     @Override
     protected void onDestroy() {
         super.onDestroy();
         // 移除未执行的任务，以防止内存泄漏
         handler.removeCallbacksAndMessages(null);
     }
-
     public Vector2D putInCircle(float cx,float cy,float sx,float sy , float r){
         Vector2D res = new Vector2D();
         float k =(sy-cy)/(sx-cx);
