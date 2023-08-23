@@ -68,12 +68,16 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         coldbutton = findViewById(R.id.coldbutton);
         hotbutton.setOnClickListener(view -> {
             status = STATUS_HOT;
+            hotbutton.setImageResource(R.drawable.hot_press);
+            coldbutton.setImageResource(R.drawable.cold_notpress);
             adjustSmallButton.setImageResource(R.drawable.adjustsmallbutton_hot);
             adjustImageView.setImageResource(R.drawable.adjusthot);
             temperatureNum.setTextColor(Color.parseColor("#FF9900"));
         });
         coldbutton.setOnClickListener(view -> {
             status = STATUS_COLD;
+            hotbutton.setImageResource(R.drawable.hot_notpress);
+            coldbutton.setImageResource(R.drawable.cold_press);
             adjustSmallButton.setImageResource(R.drawable.adjustsmallbutton_cold);
             adjustImageView.setImageResource(R.drawable.adjustcold);
             temperatureNum.setTextColor(Color.parseColor("#365EFF"));

@@ -22,8 +22,7 @@ public class TabSecondFragment extends Fragment {
         mContext = getActivity(); // 获取活动页面的上下文
         // 根据布局文件fragment_tab_second.xml生成视图对象
         mView = inflater.inflate(R.layout.fragment_tab_second, container, false);
-        TextView tv_second = mView.findViewById(R.id.tv_second);
-        tv_second.setText("我是分类页面");
+
         return mView;
     }
 

@@ -3,14 +3,118 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
+    android:gravity="center_horizontal"
     android:padding="10dp">
 
-    <TextView
-        android:id="@+id/tv_second"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="bottom|center"
-        android:textColor="#000000"
-        android:textSize="17sp" />
+    <ImageView
+        android:layout_gravity="right|top"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="17dp"
+        android:background="@drawable/settingbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="345dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:src="@drawable/headpic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="17dp"
+            android:text="用户132456"
+
+            android:textSize="17sp"
+            android:textColor="#ff000000"
+         >
+
+        </TextView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="140dp"
+            android:src="@drawable/moresmallbutton">
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@drawable/whitebuttontangle"
+        android:elevation="4dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="345dp"
+        android:layout_height="86dp">
+
+        <TextView
+            android:layout_marginLeft="22dp"
+            android:text="宠物0"
+            android:textColor="#ff000000"
+            android:textSize="14sp"
+            android:lineSpacingExtra="4.2sp"
+            android:textFontWeight="500"
+            android:fontFamily="@font/notosanssc_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <TextView
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="25dp"
+            android:text="查看全部 >"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <ImageView
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="22dp"
+            android:background="@drawable/petaddbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ImageView>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@drawable/whitebuttontangle"
+        android:elevation="4dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="345dp"
+        android:layout_height="86dp">
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@drawable/whitebuttontangle"
+        android:elevation="4dp"
+        android:layout_marginTop="22dp"
+        android:layout_width="345dp"
+        android:layout_height="86dp">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:background="@drawable/whitebuttontangle"
+        android:elevation="4dp"
+        android:layout_marginTop="27dp"
+        android:layout_width="345dp"
+        android:layout_height="86dp">
+
+    </RelativeLayout>
+
 
 </LinearLayout>

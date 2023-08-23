@@ -62,7 +62,7 @@
             android:lineSpacingExtra="119sp"
             android:textFontWeight="700"
 
-            android:text="27 ℃"
+            android:text=""
             android:layout_width="120dp"
             android:layout_height="wrap_content"></TextView>
 
@@ -96,7 +96,7 @@
                     android:id="@+id/hotbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/cold_press">
+                    android:src="@drawable/hot_press">
 
                 </ImageView>
                 <TextView
