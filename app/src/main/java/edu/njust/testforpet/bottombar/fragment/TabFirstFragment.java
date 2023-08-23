@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
+import edu.njust.testforpet.HomePageActivity;
 import edu.njust.testforpet.R;
 
 public class TabFirstFragment extends Fragment {
@@ -24,5 +28,18 @@ public class TabFirstFragment extends Fragment {
 
         return mView;
     }
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        Button button =getActivity().findViewById(R.id.floatingButton);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("success");
+            }
+        });
 
+
+
+
+    }
 }

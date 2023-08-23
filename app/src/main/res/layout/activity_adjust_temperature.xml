@@ -94,9 +94,9 @@
 
                 <ImageView
                     android:id="@+id/hotbutton"
-                    android:src="@drawable/cold_notpress"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cold_press">
 
                 </ImageView>
                 <TextView

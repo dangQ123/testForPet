@@ -3,17 +3,24 @@ package edu.njust.testforpet;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
+import cn.pedant.SweetAlert.SweetAlertDialog;
 import edu.njust.testforpet.bottombar.adapter.TabPagerAdapter;
 
 public class HomePageActivity extends AppCompatActivity {
 
     private ViewPager vp_content;
     private RadioGroup rg_tabbar;
+    private Button floatingButton;
 
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +47,11 @@ public class HomePageActivity extends AppCompatActivity {
                 }
             }
         }));
+        // 在 Activity 中
+        View anotherRootView = getLayoutInflater().inflate(R.layout.fragment_tab_first, null);
 
+// 或者在 Fragment 中
+//
 
     }
 }
