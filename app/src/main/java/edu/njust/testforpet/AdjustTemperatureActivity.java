@@ -3,13 +3,16 @@ package edu.njust.testforpet;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -30,7 +33,8 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
     public static final int STATUS_HOT = 0,STATUS_COLD = 1;
 
     float density ;
-    private int count = 0;
+    private int count = 0 , temp;
+    private Button backicon;
 
     public int getNowTemp(float circle_x_px, float circle_y_px,float smallButton_x_px,float smallButton_y_px , int status){
         if (status==STATUS_HOT){
@@ -48,10 +52,9 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
                 smallButton_x_px = adjustSmallButton.getX()+34.5f/2*density;
                 smallButton_y_px = adjustSmallButton.getY()+34.5f/2*density;
 //                int temp = (int) (getAngle(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px)/9+20);
-                int temp = getNowTemp(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px,status);
+                temp = getNowTemp(circle_x_px,circle_y_px,smallButton_x_px,smallButton_y_px,status);
                 temperatureNum.setText(""+temp
                 +"℃");
-
                 // 继续定时任务
                 startUpdatingText();
             }
@@ -63,6 +66,15 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         setContentView(R.layout.activity_adjust_temperature);
         density = getResources().getDisplayMetrics().density;
         adjustSmallButton = findViewById(R.id.adjustSmallButton);
+        backicon = findViewById(R.id.backicon);
+        backicon.setOnClickListener(view -> {
+            Intent intent = new Intent(this , HomePageActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            Bundle bundle = new Bundle();
+            bundle.putInt("temperature",temp);
+            intent.putExtras(bundle);
+            startActivity(intent);
+        });
 
         hotbutton = findViewById(R.id.hotbutton);
         coldbutton = findViewById(R.id.coldbutton);
@@ -175,5 +187,28 @@ public class AdjustTemperatureActivity extends AppCompatActivity {
         return res;
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            // 想干啥自己写在这里
+            Intent intent = new Intent(this , HomePageActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            Bundle bundle = new Bundle();
+            bundle.putInt("temperature",temp);
+            intent.putExtras(bundle);
+            startActivity(intent);
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Bundle bundle = getIntent().getExtras();
+        if (bundle!=null){
+            int temperature = bundle.getInt("temperature");
+            temperatureNum.setText(temperature+"℃");
+        }
+    }
 }

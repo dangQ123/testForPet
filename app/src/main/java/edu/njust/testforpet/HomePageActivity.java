@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,14 +19,22 @@ public class HomePageActivity extends AppCompatActivity {
 
     private ViewPager vp_content;
     private RadioGroup rg_tabbar;
-    private Button floatingButton;
-
+    private static boolean isLogin = false;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
+        SharedPreferences shared = getSharedPreferences("share",MODE_PRIVATE);
+        String phonenumber = shared.getString("phonenumber","nostring");
+        String password = shared.getString("password","nostring");
+        if (!phonenumber.equals("nostring")){
+            isLogin = true;
+        }
+        if (!isLogin){
+            startActivity(new Intent(this , LoginMainActivity.class));
+        }
 
         vp_content = findViewById(R.id.vp_content);
         rg_tabbar =findViewById(R.id.rg_tabbar);
@@ -47,11 +57,5 @@ public class HomePageActivity extends AppCompatActivity {
                 }
             }
         }));
-        // 在 Activity 中
-        View anotherRootView = getLayoutInflater().inflate(R.layout.fragment_tab_first, null);
-
-// 或者在 Fragment 中
-//
-
     }
 }

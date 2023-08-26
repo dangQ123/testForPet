@@ -20,6 +20,7 @@
 
 
         <LinearLayout
+            android:id="@+id/sleepbuttonlinear"
             android:layout_marginLeft="28dp"
             android:elevation="4dp"
             android:layout_width="wrap_content"
@@ -38,7 +39,8 @@
                 android:textFontWeight="500"
                 android:textSize="12sp"></TextView>
 
-            <ImageButton
+            <ImageView
+
                 android:id="@+id/sleepbutton"
                 android:layout_width="96dp"
                 android:layout_height="96dp"
@@ -48,11 +50,11 @@
                 android:elevation="10dp"
                 android:src="@drawable/sleepbutton">
 
-            </ImageButton>
+            </ImageView>
         </LinearLayout>
 
         <LinearLayout
-
+            android:id="@+id/infectlinear"
             android:layout_marginLeft="28dp"
             android:elevation="4dp"
             android:layout_width="wrap_content"
@@ -72,6 +74,7 @@
                 android:textSize="12sp"></TextView>
 
             <ImageButton
+                android:clickable="false"
                 android:paddingTop="30dp"
                 android:id="@+id/infectbutton"
                 android:layout_width="96dp"
@@ -124,9 +127,10 @@
         </TextView>
 
         <TextView
+            android:id="@+id/exacttemp"
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
-            android:text="27 ℃"
+            android:text="30 ℃"
             android:textColor="#ffFB8F66"
             android:textSize="18.18sp"
             android:lineSpacingExtra="3.18sp"

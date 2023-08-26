@@ -19,24 +19,26 @@
     </Button>
 
     <ImageView
+        android:id="@+id/infectimage"
         android:layout_width="wrap_content"
         android:layout_height="400dp"
         android:src="@drawable/infectbigbutton1">
 
     </ImageView>
 
-        <Button
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:id="@+id/operateDisinfectButton"
-            android:layout_width="259dp"
-            android:layout_height="51dp"
-            android:background="@drawable/disinfectbuttonretangle"
-            android:text="开始消毒"
+    <Button
+        android:id="@+id/operateDisinfectButton"
+        android:layout_width="259dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/disinfectbuttonretangle"
+        android:fontFamily="@font/notosanssc_black"
+        android:gravity="center"
+        android:text="开始消毒"
 
-            android:textColor="#ff3D3D3D"
-            android:textSize="20sp">
+        android:textColor="#ff3D3D3D"
+        android:textSize="20sp">
 
 
-        </Button>
+    </Button>
 </LinearLayout>

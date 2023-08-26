@@ -2,6 +2,8 @@ package edu.njust.testforpet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -13,8 +15,10 @@ import android.widget.EditText;
 public class PhoneVerifyActivity extends AppCompatActivity {
 
     private EditText editText;
+    private Button accountbutton;
     private boolean isAllRightToLoginPhone = false;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +60,16 @@ public class PhoneVerifyActivity extends AppCompatActivity {
 
             }
         });
+
+        accountbutton = findViewById(R.id.accountbutton);
+        accountbutton.setOnClickListener(view -> {
+            Intent intent = new Intent(this , InputVerifyActivity.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("phonenumber", String.valueOf(editText.getText()));
+            intent.putExtras(bundle);
+            startActivity(intent);
+        });
+
 
     }
 }
