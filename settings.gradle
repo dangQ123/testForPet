@@ -17,4 +17,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "testForPet"
 include ':app'
-include ':smalltest'
+include ':httpstudy'

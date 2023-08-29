@@ -3,8 +3,7 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:padding="10dp">
+    android:gravity="center_horizontal">
 
     <ImageView
         android:layout_gravity="right|top"
@@ -18,7 +17,7 @@
 
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="345dp"
+        android:layout_width="320dp"
         android:layout_height="50dp">
 
         <ImageView
@@ -50,12 +49,11 @@
         </ImageView>
 
     </LinearLayout>
-
     <RelativeLayout
-        android:background="@drawable/whitebuttontangle"
+        android:background="@drawable/fragmenttwo_tangle_1"
         android:elevation="4dp"
         android:layout_marginTop="22dp"
-        android:layout_width="345dp"
+        android:layout_width="320dp"
         android:layout_height="86dp">
 
         <TextView
@@ -96,7 +94,7 @@
         android:background="@drawable/whitebuttontangle"
         android:elevation="4dp"
         android:layout_marginTop="22dp"
-        android:layout_width="345dp"
+        android:layout_width="320dp"
         android:layout_height="86dp">
         <LinearLayout
             android:layout_width="match_parent"
@@ -180,7 +178,7 @@
         android:background="@drawable/whitebuttontangle"
         android:elevation="4dp"
         android:layout_marginTop="22dp"
-        android:layout_width="345dp"
+        android:layout_width="320dp"
         android:layout_height="120dp">
 
         <LinearLayout
@@ -261,7 +259,7 @@
         android:background="@drawable/whitebuttontangle"
         android:elevation="4dp"
         android:layout_marginTop="35dp"
-        android:layout_width="345dp"
+        android:layout_width="320dp"
         android:layout_height="120dp">
 
         <LinearLayout

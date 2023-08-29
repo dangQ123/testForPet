@@ -26,7 +26,7 @@
             android:layout_gravity="right|top"
             android:layout_marginTop="97dp"
             android:layout_marginRight="-261dp"
-            android:src="@drawable/adjusthot"
+            android:src="@drawable/adjustimageviewp"
             android:layout_width="523dp"
             android:layout_height="532dp">
 
@@ -93,6 +93,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+
                     android:id="@+id/hotbutton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

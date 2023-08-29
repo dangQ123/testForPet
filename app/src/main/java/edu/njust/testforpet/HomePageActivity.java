@@ -33,7 +33,9 @@ public class HomePageActivity extends AppCompatActivity {
             isLogin = true;
         }
         if (!isLogin){
-            startActivity(new Intent(this , LoginMainActivity.class));
+            Intent intent = new Intent(this, LoginMainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
         }
 
         vp_content = findViewById(R.id.vp_content);

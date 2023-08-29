@@ -31,7 +31,7 @@
             <TextView
                 android:layout_marginLeft="30dp"
                 android:text="手机验证码登录"
-                android:textColor="#ffE22727"
+                android:textColor="#4F90FF"
                 android:textSize="34sp"
                 android:lineSpacingExtra="7.2sp"
                 android:textFontWeight="700"

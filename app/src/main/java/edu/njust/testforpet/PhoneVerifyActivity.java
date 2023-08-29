@@ -15,7 +15,7 @@ import android.widget.EditText;
 public class PhoneVerifyActivity extends AppCompatActivity {
 
     private EditText editText;
-    private Button accountbutton;
+    private Button accountbutton,backicon;
     private boolean isAllRightToLoginPhone = false;
 
     @SuppressLint("MissingInflatedId")
@@ -68,6 +68,14 @@ public class PhoneVerifyActivity extends AppCompatActivity {
             bundle.putString("phonenumber", String.valueOf(editText.getText()));
             intent.putExtras(bundle);
             startActivity(intent);
+        });
+
+        backicon = findViewById(R.id.backicon);
+        backicon.setOnClickListener(view -> {
+            Intent intent = new Intent(this , LoginMainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_from_left,R.anim.slide_out_from_right);
         });
 
 

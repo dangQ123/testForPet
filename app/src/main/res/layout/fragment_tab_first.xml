@@ -1,6 +1,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -17,127 +18,143 @@
         android:layout_width="match_parent"
         android:layout_height="160dp">
 
-
-
         <LinearLayout
-            android:id="@+id/sleepbuttonlinear"
-            android:layout_marginLeft="28dp"
-            android:elevation="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/whitebuttontangle"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="156dp">
+            <LinearLayout
+                android:id="@+id/sleepbuttonlinear"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:fontFamily="@font/notosanssc_black"
-                android:lineSpacingExtra="3.6sp"
-                android:text="睡眠"
-                android:textColor="#ff3D3D3D"
-                android:textFontWeight="500"
-                android:textSize="12sp"></TextView>
+                android:elevation="4dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/whitebuttontangle"
+                android:orientation="vertical">
 
-            <ImageView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="@font/notosanssc_black"
+                    android:lineSpacingExtra="3.6sp"
+                    android:text="睡眠"
+                    android:textColor="#ff3D3D3D"
+                    android:textFontWeight="500"
+                    android:textSize="12sp"></TextView>
 
-                android:id="@+id/sleepbutton"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:layout_marginLeft="28dp"
-                android:layout_marginRight="28dp"
-                android:background="#00000000"
-                android:elevation="10dp"
-                android:src="@drawable/sleepbutton">
+                <ImageView
 
-            </ImageView>
+                    android:id="@+id/sleepbutton"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_marginLeft="28dp"
+                    android:layout_marginRight="28dp"
+                    android:background="#00000000"
+                    android:elevation="10dp"
+                    android:src="@drawable/sleepbutton">
+
+                </ImageView>
+            </LinearLayout>
         </LinearLayout>
-
         <LinearLayout
-            android:id="@+id/infectlinear"
-            android:layout_marginLeft="28dp"
-            android:elevation="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/whitebuttontangle"
-            android:orientation="vertical">
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="156dp">
+            <LinearLayout
+                android:id="@+id/infectlinear"
+                android:elevation="4dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/whitebuttontangle"
+                android:orientation="vertical">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="12dp"
-                android:fontFamily="@font/notosanssc_black"
-                android:lineSpacingExtra="3.6sp"
-                android:text="消毒"
-                android:textColor="#ff3D3D3D"
-                android:textFontWeight="500"
-                android:textSize="12sp"></TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:fontFamily="@font/notosanssc_black"
+                    android:lineSpacingExtra="3.6sp"
+                    android:text="消毒"
+                    android:textColor="#ff3D3D3D"
+                    android:textFontWeight="500"
+                    android:textSize="12sp"></TextView>
 
-            <ImageButton
-                android:clickable="false"
-                android:paddingTop="30dp"
-                android:id="@+id/infectbutton"
-                android:layout_width="96dp"
-                android:layout_height="96dp"
-                android:layout_gravity="center"
+                <ImageButton
+                    android:clickable="false"
+                    android:paddingTop="30dp"
+                    android:id="@+id/infectbutton"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    android:layout_gravity="center"
 
-                android:background="#00000000"
-                android:elevation="10dp"
-                android:src="@drawable/disinfectbutton">
+                    android:background="#00000000"
+                    android:elevation="10dp"
+                    android:src="@drawable/disinfectbutton">
 
-            </ImageButton>
+                </ImageButton>
+            </LinearLayout>
         </LinearLayout>
+2
     </LinearLayout>
 
     <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_marginTop="10dp"
+        android:layout_width="330dp"
+        android:layout_height="320dp"
+        android:layout_gravity="center"
+        android:background="@drawable/whitebuttontangle"
+        android:elevation="6dp">
 
         <ImageView
+            android:layout_marginTop="40dp"
             android:id="@+id/backgroundImage"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/temperaturebackground" />
+            android:layout_width="280dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center"
+            android:src="@drawable/exactemperaturep" />
 
         <Button
-            android:textColor="#ffFFFFFF"
-
             android:id="@+id/floatingButton"
+
             android:layout_width="56dp"
             android:layout_height="28dp"
             android:layout_gravity="top|end"
             android:layout_marginTop="47dp"
             android:layout_marginRight="42dp"
             android:background="@drawable/regulatebutton"
+            android:text="调节"
 
 
-            android:text="调节" />
+            android:textColor="#ffFFFFFF" />
+
         <TextView
-            android:text="温度"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="47dp"
             android:layout_marginTop="30dp"
-            android:textColor="#ff3D3D3D"
-            android:textSize="20sp"
-            android:lineSpacingExtra="-6sp"
-            android:textFontWeight="500"
             android:fontFamily="@font/notosanssc_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:lineSpacingExtra="-6sp"
+            android:text="温度"
+            android:textColor="#ff3D3D3D"
+            android:textFontWeight="500"
+            android:textSize="20sp">
 
         </TextView>
 
         <TextView
             android:id="@+id/exacttemp"
-            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/notosanssc_black"
+            android:lineSpacingExtra="3.18sp"
             android:text="30 ℃"
             android:textColor="#ffFB8F66"
-            android:textSize="18.18sp"
-            android:lineSpacingExtra="3.18sp"
             android:textFontWeight="700"
-            android:fontFamily="@font/notosanssc_black"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:textSize="18.18sp">
 
         </TextView>
 
@@ -145,225 +162,234 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-
-        android:layout_height="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="165dp"
         android:gravity="center_vertical">
 
         <LinearLayout
-            android:paddingTop="10dp"
-            android:layout_marginLeft="28dp"
-            android:background="@drawable/whitebuttontangle"
-            android:elevation="4dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="156dp">
             <LinearLayout
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="28dp"
+                android:background="@drawable/whitebuttontangle"
+                android:elevation="4dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp">
 
-                android:orientation="vertical">
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
 
-                <ImageView
-                    android:layout_marginTop="13dp"
-                    android:src="@drawable/energybutton"
-                    android:layout_width="43dp"
-                    android:layout_height="43dp">
+                    android:orientation="vertical">
 
-                </ImageView>
+                    <ImageView
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/energybutton"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp">
 
-                <TextView
-                    android:textColor="#ff3D3D3D"
-                    android:textSize="14sp"
-                    android:lineSpacingExtra="4.2sp"
-                    android:textFontWeight="500"
-                    android:fontFamily="@font/notosanssc_black"
-                    android:text="开机"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    </ImageView>
 
-                </TextView>
+                    <TextView
+                        android:textColor="#ff3D3D3D"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4.2sp"
+                        android:textFontWeight="500"
+                        android:fontFamily="@font/notosanssc_black"
+                        android:text="开机"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
 
-                <com.suke.widget.SwitchButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
+                    </TextView>
 
-                </com.suke.widget.SwitchButton>
+                    <com.suke.widget.SwitchButton
+                        app:sb_checked_color="#4F90FF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.suke.widget.SwitchButton>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_marginTop="13dp"
+                        android:src="@drawable/lighticon"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp">
+
+                    </ImageView>
+
+                    <TextView
+                        android:textColor="#ff3D3D3D"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4.2sp"
+                        android:textFontWeight="500"
+                        android:fontFamily="@font/notosanssc_black"
+                        android:text="灯光"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                    <com.suke.widget.SwitchButton
+                        app:sb_checked_color="#4F90FF"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </com.suke.widget.SwitchButton>
+
+                </LinearLayout>
 
             </LinearLayout>
-            <LinearLayout
-                android:gravity="center"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_marginTop="13dp"
-                    android:src="@drawable/lighticon"
-                    android:layout_width="43dp"
-                    android:layout_height="43dp">
-
-                </ImageView>
-
-                <TextView
-                    android:textColor="#ff3D3D3D"
-                    android:textSize="14sp"
-                    android:lineSpacingExtra="4.2sp"
-                    android:textFontWeight="500"
-                    android:fontFamily="@font/notosanssc_black"
-                    android:text="灯光"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </TextView>
-
-                <com.suke.widget.SwitchButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                </com.suke.widget.SwitchButton>
-
-            </LinearLayout>
-
         </LinearLayout>
-
-
-
         <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="156dp">
+            <LinearLayout
 
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginLeft="28dp"
-            android:background="@drawable/whitebuttontangle"
-            android:elevation="4dp"
-            android:orientation="vertical">
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@drawable/whitebuttontangle"
+                android:elevation="4dp"
+                android:orientation="vertical">
 
-            <GridLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:columnCount="2"
-                android:paddingTop="25dp"
-                android:paddingLeft="30dp"
-                android:rowCount="2">
+                <GridLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:columnCount="2"
+                    android:paddingLeft="30dp"
+                    android:paddingTop="25dp"
+                    android:rowCount="2">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <ImageView
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/fourbutton1">
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
-                    </ImageView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fourbutton1">
 
-                    <TextView
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanssc_black"
+                            android:lineSpacingExtra="9sp"
+                            android:text="关机"
+                            android:textColor="#ff3D3D3D"
+                            android:textFontWeight="500"
+                            android:textSize="10sp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/notosanssc_black"
-                        android:lineSpacingExtra="9sp"
-                        android:text="关机"
-                        android:textColor="#ff3D3D3D"
-                        android:textFontWeight="500"
-                        android:textSize="10sp">
+                        android:layout_marginLeft="50dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
-                    </TextView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fourbutton2">
 
-                </LinearLayout>
+                        </ImageView>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="50dp"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanssc_black"
+                            android:lineSpacingExtra="9sp"
+                            android:text="待机"
+                            android:textColor="#ff3D3D3D"
+                            android:textFontWeight="500"
+                            android:textSize="10sp">
 
-                    <ImageView
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:src="@drawable/fourbutton2">
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
-                    </ImageView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fourbutton3">
 
-                    <TextView
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanssc_black"
+                            android:lineSpacingExtra="9sp"
+                            android:text="提醒"
+                            android:textColor="#ff3D3D3D"
+                            android:textFontWeight="500"
+                            android:textSize="10sp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/notosanssc_black"
-                        android:lineSpacingExtra="9sp"
-                        android:text="待机"
-                        android:textColor="#ff3D3D3D"
-                        android:textFontWeight="500"
-                        android:textSize="10sp">
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="6dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
 
-                    </TextView>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/fourbutton4">
 
-                </LinearLayout>
+                        </ImageView>
 
-                <LinearLayout
-                    android:layout_marginTop="6dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/notosanssc_black"
+                            android:lineSpacingExtra="9sp"
+                            android:text="连接"
+                            android:textColor="#ff3D3D3D"
+                            android:textFontWeight="500"
+                            android:textSize="10sp">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/fourbutton3">
+                        </TextView>
 
-                    </ImageView>
+                    </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/notosanssc_black"
-                        android:lineSpacingExtra="9sp"
-                        android:text="提醒"
-                        android:textColor="#ff3D3D3D"
-                        android:textFontWeight="500"
-                        android:textSize="10sp">
-
-                    </TextView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_marginTop="6dp"
-                    android:layout_marginLeft="50dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/fourbutton4">
-
-                    </ImageView>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/notosanssc_black"
-                        android:lineSpacingExtra="9sp"
-                        android:text="连接"
-                        android:textColor="#ff3D3D3D"
-                        android:textFontWeight="500"
-                        android:textSize="10sp">
-
-                    </TextView>
-
-                </LinearLayout>
-
-            </GridLayout>
+                </GridLayout>
 
 
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

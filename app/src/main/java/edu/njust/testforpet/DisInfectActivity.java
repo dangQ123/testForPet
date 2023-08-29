@@ -41,6 +41,7 @@ public class DisInfectActivity extends AppCompatActivity {
             Intent intent = new Intent(this, HomePageActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(new Intent(this , HomePageActivity.class));
+            overridePendingTransition(R.anim.slide_in_from_left,R.anim.slide_out_from_right);
         });
 
     }

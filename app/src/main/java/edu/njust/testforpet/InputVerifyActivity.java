@@ -2,6 +2,7 @@ package edu.njust.testforpet;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ import java.io.PipedReader;
 public class InputVerifyActivity extends AppCompatActivity {
 
     private EditText editText;
-    private Button button;
+    private Button button, backicon;
 
     private boolean isAllRightToVerify = false;
 
@@ -57,6 +58,14 @@ public class InputVerifyActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
+        });
+
+        backicon = findViewById(R.id.backicon1);
+        backicon.setOnClickListener(view -> {
+            Intent intent = new Intent(this , LoginMainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
+            overridePendingTransition(R.anim.slide_in_from_left,R.anim.slide_out_from_right);
         });
 
     }

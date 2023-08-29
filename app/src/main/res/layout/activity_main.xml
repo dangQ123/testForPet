@@ -14,7 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="118dp"
         android:layout_marginBottom="53dp"
-        android:src="@drawable/cat_head"
+        android:src="@drawable/blue_cat_head"
 
         ></ImageView>
 
@@ -40,7 +40,7 @@
         android:layout_marginTop="23dp"
         android:layout_gravity="center"
         android:text="@string/loginByAccount"
-        android:textColor="#ffED9076"
+
         android:textSize="18sp"
         android:lineSpacingExtra="2.4sp"
         android:textFontWeight="700"
