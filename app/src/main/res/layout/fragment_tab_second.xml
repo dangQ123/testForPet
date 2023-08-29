@@ -50,8 +50,10 @@
 
     </LinearLayout>
     <RelativeLayout
+
         android:background="@drawable/fragmenttwo_tangle_1"
-        android:elevation="4dp"
+        android:outlineSpotShadowColor="@color/light_grey"
+        android:elevation="35dp"
         android:layout_marginTop="22dp"
         android:layout_width="320dp"
         android:layout_height="86dp">
@@ -92,7 +94,8 @@
     </RelativeLayout>
     <RelativeLayout
         android:background="@drawable/whitebuttontangle"
-        android:elevation="4dp"
+        android:outlineSpotShadowColor="@color/light_grey"
+        android:elevation="35dp"
         android:layout_marginTop="22dp"
         android:layout_width="320dp"
         android:layout_height="86dp">
@@ -176,7 +179,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:background="@drawable/whitebuttontangle"
-        android:elevation="4dp"
+        android:outlineSpotShadowColor="@color/light_grey"
+        android:elevation="35dp"
         android:layout_marginTop="22dp"
         android:layout_width="320dp"
         android:layout_height="120dp">
@@ -257,35 +261,36 @@
     <LinearLayout
         android:orientation="vertical"
         android:background="@drawable/whitebuttontangle"
-        android:elevation="4dp"
+        android:outlineSpotShadowColor="@color/light_grey"
+        android:elevation="85dp"
         android:layout_marginTop="35dp"
         android:layout_width="320dp"
         android:layout_height="120dp">
 
         <LinearLayout
-            android:gravity="center_vertical"
-            android:layout_weight="1"
             android:layout_width="match_parent"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical">
 
             <ImageView
-                android:layout_marginLeft="18dp"
-                android:src="@drawable/mine4_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18dp"
+                android:src="@drawable/mine4_1">
 
             </ImageView>
 
             <TextView
-                android:textColor="#ff000000"
-
-                android:lineSpacingExtra="9sp"
-                android:textFontWeight="500"
-                android:fontFamily="@font/notosanssc_black"
-                android:layout_marginLeft="12.45dp"
-                android:text="智能客服"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12.45dp"
+                android:fontFamily="@font/notosanssc_black"
+                android:lineSpacingExtra="9sp"
+                android:text="智能客服"
+                android:textColor="#ff000000"
+                android:textFontWeight="500">
 
             </TextView>
 
@@ -298,6 +303,7 @@
             </ImageView>
 
         </LinearLayout>
+
         <LinearLayout
             android:gravity="center_vertical"
             android:layout_weight="1"

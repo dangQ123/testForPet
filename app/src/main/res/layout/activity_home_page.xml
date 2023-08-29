@@ -10,27 +10,32 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <RadioGroup
+    <LinearLayout
         android:background="@color/white"
-        android:id="@+id/rg_tabbar"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+        <RadioGroup
+            android:background="@color/white"
+            android:id="@+id/rg_tabbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/rb_claw"
-            style="@style/TabButton"
-            android:checked="true"
-            android:text="首页"
-            android:drawableTop="@drawable/tab_first_selector" />
+            <RadioButton
+                android:id="@+id/rb_claw"
+                style="@style/TabButton"
+                android:checked="true"
+                android:text="首页"
+                android:drawableTop="@drawable/tab_first_selector" />
 
-        <RadioButton
-            android:id="@+id/rb_mine"
-            style="@style/TabButton"
-            android:text="我的"
-            android:drawableTop="@drawable/tab_second_selector" />
+            <RadioButton
+                android:id="@+id/rb_mine"
+                style="@style/TabButton"
+                android:text="我的"
+                android:drawableTop="@drawable/tab_second_selector" />
 
 
-    </RadioGroup>
+        </RadioGroup>
+    </LinearLayout>
 
 </LinearLayout>
