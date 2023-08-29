@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,7 +42,7 @@ public class TabFirstFragment extends Fragment {
     }
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        Button floatingbutton =getActivity().findViewById(R.id.floatingButton);
+        ImageView floatingbutton =getActivity().findViewById(R.id.floatingButton);
         sleeplinear = getActivity().findViewById(R.id.sleepbuttonlinear);
         sleeplinear.setOnClickListener(view -> {
             Intent intent = new Intent(getActivity(), SleepActivity.class);

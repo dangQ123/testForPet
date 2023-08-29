@@ -82,16 +82,17 @@
                     android:textSize="12sp"></TextView>
 
                 <ImageButton
+                    android:layout_marginTop="-20dp"
                     android:clickable="false"
                     android:paddingTop="30dp"
                     android:id="@+id/infectbutton"
-                    android:layout_width="96dp"
-                    android:layout_height="96dp"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
                     android:layout_gravity="center"
+                    android:background="@drawable/disinfectbuttonp"
 
-                    android:background="#00000000"
                     android:elevation="10dp"
-                    android:src="@drawable/disinfectbutton">
+                    >
 
                 </ImageButton>
             </LinearLayout>
@@ -115,19 +116,30 @@
             android:layout_gravity="center"
             android:src="@drawable/exactemperaturep" />
 
-        <Button
-            android:id="@+id/floatingButton"
-
+        <FrameLayout
             android:layout_width="56dp"
             android:layout_height="28dp"
             android:layout_gravity="top|end"
             android:layout_marginTop="47dp"
-            android:layout_marginRight="42dp"
-            android:background="@drawable/regulatebutton"
-            android:text="调节"
+            android:layout_marginRight="42dp">
+            <ImageView
+                android:id="@+id/floatingButton"
+                android:layout_width="56dp"
+                android:layout_height="28dp"
 
+                android:background="@drawable/regulatebutton" />
+            <TextView
+                android:layout_marginTop="-4dp"
+                android:layout_gravity="center"
+                android:text="调节"
+                android:fontFamily="@font/notosanssc_black"
+                android:textColor="#ffFFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            android:textColor="#ffFFFFFF" />
+            </TextView>
+        </FrameLayout>
+
 
         <TextView
             android:layout_width="wrap_content"

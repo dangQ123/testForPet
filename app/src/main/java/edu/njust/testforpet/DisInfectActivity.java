@@ -24,15 +24,14 @@ public class DisInfectActivity extends AppCompatActivity {
             operateDisinfectButton.setText("正在消毒");
             operateDisinfectButton.setEnabled(false); // 禁用按钮以防止重复点击
             operateDisinfectButton.setElevation(6);
-            disinfectimage.setImageResource(R.drawable.infectbigbutton2);
+            disinfectimage.setImageResource(R.drawable.disfectbigbuttonp2);
 
 
             Handler handler = new Handler();
             handler.postDelayed(() -> {
                 operateDisinfectButton.setText("消毒完成");
                 operateDisinfectButton.setEnabled(true); // 恢复按钮可点击状态
-                operateDisinfectButton.setBackgroundResource(R.drawable.disinfectbuttonretangle);
-                disinfectimage.setImageResource(R.drawable.infectbigbutton1);
+                disinfectimage.setImageResource(R.drawable.disinfectbigbuttonp1);
             }, 3000); // 3秒后更新文字
         });
 
